@@ -63,7 +63,9 @@ class TestTV:
         result = pyfiglet.figlet_format("TV Program", font="slant")
         print(result)     
 
-# Create two TV instances
+    # Create two TV instances
+        tv1 = TV()
+        tv2 = TV()
 
 # Turn on TV 1, set the channel and volume
 
