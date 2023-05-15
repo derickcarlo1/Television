@@ -94,6 +94,6 @@ def main():
             print("Invalid choice. Please enter 'c', 'v', or 'q'.")
     
 # Call the main method to run the TV program
-
-
+if __name__ == '__main__':
+    main()
 
