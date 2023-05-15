@@ -74,3 +74,16 @@ class TestTV:
             print("033[31mInvalid volume level! Please enter a number between 1 and 7.\033[0m")
             volume1 = int(input("Enter the volume level for tv1 (1-7): "))
         tv1.setVolume(volume1)
+
+        tv2.turnOn()
+        channel2 = int(input("\033[32mEnter the channel for tv2 (1-120):\033[0m"))
+        while not (1 <= channel2 <= 120):
+            print("Invalid channel! Please enter a number between 1 and 120.")
+            channel2 = int(input("Enter the channel for tv2 (1-120): "))
+        tv2.setChannel(channel2)
+
+        volume2 = int(input("\033[32mEnter the volume level for tv2 (1-7):\033[0m"))
+        while not (1 <= volume2 <= 7):
+            print("Invalid volume level! Please enter a number between 1 and 7.\033[0m")
+            volume2 = int(input("Enter the volume level for tv2 (1-7): "))
+        tv2.setVolume(volume2)        
