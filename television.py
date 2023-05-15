@@ -10,13 +10,12 @@ class TV:
         self.on = False
 
     # Turn the TV on
-    
+    def turnOn(self):
+        self.on = True
 
     # Turn the TV off
-    
-
-
-# Turn the TV off
+    def turnOff(self):
+        self.on = False
 
 # Get the current channel
 
