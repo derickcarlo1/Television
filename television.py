@@ -67,7 +67,10 @@ class TestTV:
         tv1 = TV()
         tv2 = TV()
 
-# Turn on TV 1, set the channel and volume
+        # Turn on TV 1, set the channel and volume
+        tv1.turnOn()
+        tv1.setChannel(30)
+        tv1.setVolume(3)
 
 # Turn on TV 2, increase the channel twice and volume once
 
