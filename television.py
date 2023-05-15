@@ -76,7 +76,22 @@ def main():
         else:
             print("Invalid choice. Please enter 'on' or 'off'.")
 
-# Prompt the user to change the channel or adjust the volume level
+    # Prompt the user to change the channel or adjust the volume level
+    while tv.on:
+        choice = input("Enter 'c' to change the channel, 'v' to adjust the volume level, or 'q' to quit: ")
+        if choice.lower() == 'c':
+            channel = int(input("Enter the channel number (1-120): "))
+            tv.setChannel(channel)
+            print(f"Current channel is {tv.getChannel()}")
+        elif choice.lower() == 'v':
+            volumeLevel = int(input("Enter the volume level (1-7): "))
+            tv.setVolume(volumeLevel)
+            print(f"Current volume level is {tv.getVolume()}")
+        elif choice.lower() == 'q':
+            tv.turnOff()
+            break
+        else:
+            print("Invalid choice. Please enter 'c', 'v', or 'q'.")
     
 # Call the main method to run the TV program
 
