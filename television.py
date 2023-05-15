@@ -72,7 +72,11 @@ class TestTV:
         tv1.setChannel(30)
         tv1.setVolume(3)
 
-# Turn on TV 2, increase the channel twice and volume once
+        # Turn on TV 2, increase the channel twice and volume once
+        tv2.turnOn()
+        tv2.channelUp()
+        tv2.channelUp()
+        tv2.volumeUp()
 
 # Print the current channel and volume for both TVs
 
