@@ -65,32 +65,66 @@ class TestTV:
         tv1.turnOn()
         channel1 = int(input("\033[32mEnter the channel for tv1 (1-120):\033[0m"))
         while not (1 <= channel1 <= 120):
-            print("033[31mInvalid channel! Please enter a number between 1 and 120.\033[0m")
-            channel1 = int(input("Enter the channel for tv1 (1-120): "))
+            print("Invalid channel! Please enter a number between 1 and 120.")
+            channel1 = int(input("\033[32mEnter the channel for tv1 (1-120):\033[0m"))
         tv1.setChannel(channel1)
 
-        volume1 = int(input("\033[32mEnter the volume level for tv1 (1-7):\033[0m"))
+        volume1 = int(input("\033[34mEnter the volume level for tv1 (1-7):\033[0m"))
         while not (1 <= volume1 <= 7):
-            print("033[31mInvalid volume level! Please enter a number between 1 and 7.\033[0m")
-            volume1 = int(input("Enter the volume level for tv1 (1-7): "))
+            print("Invalid volume level! Please enter a number between 1 and 7.")
+            volume1 = int(input("\033[34mEnter the volume level for tv1 (1-7):\033[0m"))
         tv1.setVolume(volume1)
 
         tv2.turnOn()
         channel2 = int(input("\033[32mEnter the channel for tv2 (1-120):\033[0m"))
         while not (1 <= channel2 <= 120):
             print("Invalid channel! Please enter a number between 1 and 120.")
-            channel2 = int(input("Enter the channel for tv2 (1-120): "))
+            channel2 = int(input("\033[32mEnter the channel for tv1 (1-120):\033[0m"))
         tv2.setChannel(channel2)
 
-        volume2 = int(input("\033[32mEnter the volume level for tv2 (1-7):\033[0m"))
+        volume2 = int(input("\033[34mEnter the volume level for tv1 (1-7):\033[0m"))
         while not (1 <= volume2 <= 7):
-            print("Invalid volume level! Please enter a number between 1 and 7.\033[0m")
-            volume2 = int(input("Enter the volume level for tv2 (1-7): "))
+            print("Invalid volume level! Please enter a number between 1 and 7.")
+            volume2 = int(input("\033[34mEnter the volume level for tv1 (1-7):\033[0m"))
         tv2.setVolume(volume2)  
         
         # Display the current channel and volume of respective tv
         print(f"\033[33mtv1's channel is {tv1.getChannel()} and volume level is {tv1.getVolume()}\033[0m")
         print(f"\033[33mtv2's channel is {tv2.getChannel()} and volume level is {tv2.getVolume()}\033[0m")
+
+        # Ask the user if they want to repeat the process
+        while True:
+            repeat = input("Do you want to change the TV settings again? (y/n): ")
+            if repeat.lower() != "y":
+                print("\033[38;5;202m5Goodbye!\033[0m")
+                break
+
+            channel1 = self.get_valid_input("\033[32mEnter the channel for tv1 (1-120): \033[0m", 1, 120)
+            tv1.setChannel(channel1)
+
+            volume1 = self.get_valid_input("\033[34mEnter the volume level for tv1 (1-7): \033[0m", 1, 7)
+            tv1.setVolume(volume1)
+
+            channel2 = self.get_valid_input("\033[32mEnter the channel for tv2 (1-120): \033[0m", 1, 120)
+            tv2.setChannel(channel2)
+
+            volume2 = self.get_valid_input("\033[34mEnter the volume level for tv2 (1-7): \033[0m", 1, 7)
+            tv2.setVolume(volume2)
+
+            # Display the current channel and volume of respective tv
+            print(f"\033[33mtv1's channel is {tv1.getChannel()} and volume level is {tv1.getVolume()}\033[0m")
+            print(f"\033[33mtv2's channel is {tv2.getChannel()} and volume level is {tv2.getVolume()}\033[0m")
+
+    def get_valid_input(self, prompt, min_value, max_value):
+        while True:
+            try:
+                value = int(input(prompt))
+                if min_value <= value <= max_value:
+                    return value
+                else:
+                    print("Invalid input! Please enter a valid value.")
+            except ValueError:
+                print("Invalid input! Please enter a valid integer.")
 
 # Calling the main method
 if __name__ == '__main__':
