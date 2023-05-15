@@ -2,10 +2,19 @@
 import pyfiglet
 
 # Define the TV class
+class TV:
+    # Initialize the TV with default values
+    def __init__(self):
+        self.channel = 1
+        self.volumeLevel = 1
+        self.on = False
 
-# Initialize the TV with default values
+    # Turn the TV on
+    
 
-# Turn the TV on
+    # Turn the TV off
+    
+
 
 # Turn the TV off
 
