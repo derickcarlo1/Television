@@ -14,6 +14,8 @@ b. Change channels
 
 c. Adjust the volume level
 
+d. Choose if you want to keep watching
+
 ## Why Use This Program
 This program is a good example for beginners who are learning about object-oriented programming in Python. It demonstrates how to create classes, methods, and objects, and how to use them to simulate a real-world object.
 
