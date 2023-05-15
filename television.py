@@ -91,4 +91,19 @@ class TestTV:
         # Display the current channel and volume of respective tv
         print(f"\033[33mtv1's channel is {tv1.getChannel()} and volume level is {tv1.getVolume()}\033[0m")
         print(f"\033[33mtv2's channel is {tv2.getChannel()} and volume level is {tv2.getVolume()}\033[0m")
-      
+
+# Calling the main method
+if __name__ == '__main__':
+    COLOR_RED = "\033[91m"
+COLOR_RESET = "\033[0m"
+
+# Generate the Figlet text
+figlet_text = pyfiglet.figlet_format("TV Setup Program")
+
+# Apply color to the Figlet text
+colored_figlet_text = COLOR_RED + figlet_text + COLOR_RESET
+
+# Print the colored Figlet text
+print(colored_figlet_text)
+
+TestTV().main()
