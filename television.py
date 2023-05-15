@@ -55,34 +55,20 @@ class TV:
         if self.on and self.volumeLevel > 1:
             self.volumeLevel -= 1
 
-# Define the TestTV class
-class TestTV:
-    # Define the main method for running the TV program
-    def main(self):
-        # Use pyfiglet to print "TV Program" in ASCII art
-        result = pyfiglet.figlet_format("TV Program", font="slant")
-        print(result)     
+# Define the main method for running the TV program
+def main():
+    # Use pyfiglet to print "TV Program" in ASCII art
+    result = pyfiglet.figlet_format("TV Program", font="slant")
+    print(result)
 
-    # Create two TV instances
-        tv1 = TV()
-        tv2 = TV()
+    # Create a TV instance
+    tv = TV()
 
-        # Turn on TV 1, set the channel and volume
-        tv1.turnOn()
-        tv1.setChannel(30)
-        tv1.setVolume(3)
+# Prompt the user to turn the TV on or off
 
-        # Turn on TV 2, increase the channel twice and volume once
-        tv2.turnOn()
-        tv2.channelUp()
-        tv2.channelUp()
-        tv2.volumeUp()
+# Prompt the user to change the channel or adjust the volume level
+    
+# Call the main method to run the TV program
 
-        # Print the current channel and volume for both TVs
-        print(f"tv1's channel is {tv1.getChannel()} and volume level is {tv1.getVolume()}")
-        print(f"tv2's channel is {tv2.getChannel()} and volume level is {tv2.getVolume()}")
 
-# Run the TestTV program
-if __name__ == '__main__':
-    TestTV().main()
 
