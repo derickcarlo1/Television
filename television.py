@@ -56,10 +56,12 @@ class TV:
             self.volumeLevel -= 1
 
 # Define the TestTV class
-
-# Define the main method for running the TV program
-    
-# Use pyfiglet to print "TV Program" in ASCII art      
+class TestTV:
+    # Define the main method for running the TV program
+    def main(self):
+        # Use pyfiglet to print "TV Program" in ASCII art
+        result = pyfiglet.figlet_format("TV Program", font="slant")
+        print(result)     
 
 # Create two TV instances
 
