@@ -1,4 +1,5 @@
 # Import the pyfiglet module for ASCII art
+import pyfiglet
 
 # Define the TV class
 
