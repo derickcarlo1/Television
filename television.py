@@ -78,7 +78,9 @@ class TestTV:
         tv2.channelUp()
         tv2.volumeUp()
 
-# Print the current channel and volume for both TVs
+        # Print the current channel and volume for both TVs
+        print(f"tv1's channel is {tv1.getChannel()} and volume level is {tv1.getVolume()}")
+        print(f"tv2's channel is {tv2.getChannel()} and volume level is {tv2.getVolume()}")
 
 # Run the TestTV program
 
