@@ -65,6 +65,16 @@ def main():
     tv = TV()
 
 # Prompt the user to turn the TV on or off
+    while True:
+        choice = input("Enter 'on' to turn the TV on or 'off' to turn it off: ")
+        if choice.lower() == 'on':
+            tv.turnOn()
+            break
+        elif choice.lower() == 'off':
+            tv.turnOff()
+            break
+        else:
+            print("Invalid choice. Please enter 'on' or 'off'.")
 
 # Prompt the user to change the channel or adjust the volume level
     
