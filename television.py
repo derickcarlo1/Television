@@ -83,4 +83,6 @@ class TestTV:
         print(f"tv2's channel is {tv2.getChannel()} and volume level is {tv2.getVolume()}")
 
 # Run the TestTV program
+if __name__ == '__main__':
+    TestTV().main()
 
